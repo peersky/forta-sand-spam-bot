@@ -32,7 +32,6 @@ const SandboxAddresses = {
     land: "0x9d305a42A3975Ee4c1C57555BeD5919889DCE63F",
   },
 };
-const SAND_TOKEN_MAINNET_ADDRESS = "";
 
 export const ERC20_ERC721_TRANSFER_EVENT =
   "event Transfer(address indexed from, address indexed to, uint256 value)";
@@ -119,7 +118,7 @@ const handleTransaction: HandleTransaction = async (
             {
               entityType: EntityType.Address,
               entity: receivers[idx].sender,
-              label: "attacker",
+              label: "SPAMMER",
               confidence: sigmoid(txcount),
               remove: false,
               metadata: {
